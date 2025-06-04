@@ -1,0 +1,114 @@
+.parentDiv {
+    width: 100%;
+    height: 100vh;  
+    background-image: url(../../assests/bg.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    
+}
+
+.childDiv {
+    width: 600px;
+    height: 400px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+    color: white;
+    box-shadow: 0 5px 5px 0px #141414;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center; 
+    position: fixed; 
+    border-radius: 15px;
+}
+
+.childDiv .heading {
+    width: 100%;
+    text-align: center;
+    color:whitesmoke;
+}
+
+.heading h1 {
+    font-size: clamp(1em, 4vw, 2em);
+
+}
+
+.childDiv .input {
+    max-width: 500px;
+    display: flex;
+    justify-content: center;
+    margin: 40px 0;
+}
+
+ input {
+    border:none;
+    border-radius: 10px;
+    padding-left: 10px; 
+    height: 40px;
+    width: 300px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    background-color: transparent;
+    color: whitesmoke;
+}
+input::placeholder{
+    color: whitesmoke;
+}
+
+.childDiv .submit {
+    margin: 2px 0; /* Adjusted margin for better centering */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.submit {
+    gap: 20px;
+}
+
+ button {
+    width: max-content;
+    height: 30px;
+    border-radius: 8px;
+    border: none;
+    padding: 1.2em;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 50px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    color: whitesmoke;
+    background-color: transparent;
+}
+
+ .result {
+    transition: 1s linear;
+    text-align: center;
+    max-width: 100%;
+    height: 5px;
+}
+
+.result h1 {
+    font-size: 2.2em;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.Guess:focus,
+.restart:focus {
+    transition: 0.3s ease-out;
+    transform: scale(1.02);
+}
+
+@media only screen and (max-width: 700px) {
+    .parentDiv {
+        background: #000;
+    }
+    .childDiv {
+        border: 1px solid white;
+    }
+}
